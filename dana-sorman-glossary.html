@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dana Sorman — Artist Glossary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!--
+  FONT NOTE: Site spec calls for Degular Mono (Adobe Fonts / Typekit) as both
+  display and body face. Adobe fonts require a kit-specific embed script tied
+  to the account license, so JetBrains Mono is used here as a placeholder —
+  matched for even-width geometric proportions and rhythm. To swap in the
+  real typeface: paste the Typekit <script src="https://use.typekit.net/XXXXXXX.js">
+  tag into <head>, then replace 'JetBrains Mono' below with 'degular-mono'
+  (or whatever family name the kit assigns).
+-->
+<style>
+  :root {
+    --paper: #E9E3D3;
+    --ink: #2E2C29;
+    --black: #000000;
+    --rule: #C9C0A8;
+    --signal: #071FE1;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { background: var(--paper); }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'JetBrains Mono', 'Degular Mono', ui-monospace, monospace;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+
+  .page {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 0 120px 56px;
+    position: relative;
+  }
+
+  .page::before {
+    content: "";
+    position: absolute;
+    left: 24px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: repeating-linear-gradient(
+      to bottom,
+      var(--rule) 0px,
+      var(--rule) 5px,
+      transparent 5px,
+      transparent 13px
+    );
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 52px 28px 28px 0;
+    border-bottom: 2px solid var(--black);
+    margin-bottom: 56px;
+  }
+
+  .mark {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: var(--black);
+    text-decoration: none;
+  }
+
+  nav a {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--ink);
+    text-decoration: none;
+    margin-left: 20px;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+  }
+  nav a:hover, nav a:focus-visible { opacity: 1; }
+  nav a.active { color: var(--black); opacity: 1; border-bottom: 2px solid var(--black); padding-bottom: 2px; }
+
+  .title-block {
+    margin-bottom: 64px;
+    padding-right: 28px;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: clamp(24px, 4.2vw, 34px);
+    letter-spacing: -0.01em;
+    color: var(--black);
+    line-height: 1.25;
+    text-transform: uppercase;
+  }
+
+  .subtitle {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: var(--ink);
+    opacity: 0.65;
+    text-transform: uppercase;
+    margin-top: 14px;
+  }
+
+  .entry {
+    padding: 24px 28px 24px 0;
+    border-bottom: 1px solid var(--rule);
+    animation: rise 0.6s ease backwards;
+  }
+  .entry:last-child { border-bottom: none; }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .term-row {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+  }
+
+  .term {
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    color: var(--black);
+    text-transform: uppercase;
+  }
+
+  .expansion {
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+    opacity: 0.65;
+  }
+
+  .definition {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ink);
+    max-width: 62ch;
+  }
+
+  footer {
+    margin-top: 80px;
+    padding: 24px 28px 0 0;
+    border-top: 2px solid var(--black);
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--ink);
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  @media (max-width: 540px) {
+    .page { padding: 0 16px 90px 40px; }
+    .page::before { left: 16px; }
+    header { padding: 36px 6px 22px 0; margin-bottom: 40px; flex-direction: column; align-items: flex-start; gap: 12px; }
+    nav a { margin-left: 0; margin-right: 18px; }
+    .title-block { margin-bottom: 44px; padding-right: 6px; }
+    .entry { padding: 20px 6px 20px 0; }
+    .definition { font-size: 14.5px; }
+    footer { padding: 22px 6px 0 0; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <a href="#" class="mark">DANA SORMAN</a>
+    <nav>
+      <a href="dana-sorman-cv.html">CV</a>
+      <a href="dana-sorman-glossary.html" class="active">GLOSSARY</a>
+    </nav>
+  </header>
+
+  <div class="title-block">
+    <h1>Artist Glossary</h1>
+    <div class="subtitle">Terms in Use</div>
+  </div>
+
+  <main>
+
+    <div class="entry" style="animation-delay: 0.02s">
+      <div class="term-row">
+        <span class="term" style="color: var(--signal);">ALIEN INDIANA JONES</span>
+        <span class="expansion">AIJ</span>
+      </div>
+      <div class="definition">a scavenger hunt guided by the system of reality, collecting genetic gems and proliferating creative consciousness.</div>
+    </div>
+
+    <div class="entry" style="animation-delay: 0.04s">
+      <div class="term-row"><span class="term">Reverse-Engineer</span></div>
+      <div class="definition">framing reality as the artifact, revealing its blueprints, and reassembling them to unlock new potentials.</div>
+    </div>
+
+    <div class="entry" style="animation-delay: 0.06s">
+      <div class="term-row"><span class="term">Time Machines</span></div>
+      <div class="definition">protocols that reshape reality by altering perception and reconfiguring event sequences.</div>
+    </div>
+
+    <div class="entry" style="animation-delay: 0.08s">
+      <div class="term-row"><span class="term">Voltage Engines</span></div>
+      <div class="definition">devices that override the brain's locks, expanding awareness through a surplus of charge.</div>
+    </div>
+
+    <div class="entry" style="animation-delay: 0.1s">
+      <div class="term-row"><span class="term">Classified Intelligence</span></div>
+      <div class="definition">knowledge withheld by human authority — concealed in vaults, black sites, and encrypted files.</div>
+    </div>
+
+    <div class="entry" style="animation-delay: 0.12s">
+      <div class="term-row"><span class="term">Hidden Intelligence</span></div>
+      <div class="definition">knowledge encoded by reality itself — concealed in geology, myth, and resonance.</div>
+    </div>
+
+    <div class="entry" style="animation-delay: 0.14s">
+      <div class="term-row"><span class="term">Ultra-terrestrial</span></div>
+      <div class="definition">intelligences of Earth's deep strata — otherworldly, yet not from elsewhere.</div>
+    </div>
+
+    <div class="entry" style="animation-delay: 0.16s">
+      <div class="term-row"><span class="term">Rule Set</span></div>
+      <div class="definition">the underlying operating logic of a system — from code to physics to reality.</div>
+    </div>
+
+    <div class="entry" style="animation-delay: 0.18s">
+      <div class="term-row"><span class="term">Genetic Abilities</span></div>
+      <div class="definition">latent strands of human potential awaiting activation into the superhuman register.</div>
+    </div>
+
+    <div class="entry" style="animation-delay: 0.2s">
+      <div class="term-row"><span class="term">Signal</span></div>
+      <div class="definition">the perceptual analog of the dark web — an invisible bandwidth where current runs outside consensus reality. the brain is the access point and Earth the host. together they generate a distributed network not housed in machines alone.</div>
+    </div>
+
+  </main>
+
+  <footer>Dana Sorman — Artist Glossary</footer>
+
+</div>
+</body>
+</html>

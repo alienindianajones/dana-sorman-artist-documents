@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dana Sorman — Selected Global Expeditions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!--
+  FONT NOTE: Site spec calls for Degular Mono (Adobe Fonts / Typekit) as both
+  display and body face. Adobe fonts require a kit-specific embed script tied
+  to the account license, so JetBrains Mono is used here as a placeholder —
+  matched for even-width geometric proportions and rhythm. To swap in the
+  real typeface: paste the Typekit <script src="https://use.typekit.net/XXXXXXX.js">
+  tag into <head>, then replace 'JetBrains Mono' below with 'degular-mono'
+  (or whatever family name the kit assigns).
+-->
+<style>
+  :root {
+    --paper: #E9E3D3;
+    --ink: #2E2C29;
+    --black: #000000;
+    --rule: #C9C0A8;
+    --signal: #071FE1;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { background: var(--paper); }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'JetBrains Mono', 'Degular Mono', ui-monospace, monospace;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+
+  .page {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 0 120px 56px;
+    position: relative;
+  }
+
+  .page::before {
+    content: "";
+    position: absolute;
+    left: 24px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: repeating-linear-gradient(
+      to bottom,
+      var(--rule) 0px,
+      var(--rule) 5px,
+      transparent 5px,
+      transparent 13px
+    );
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 52px 28px 28px 0;
+    border-bottom: 2px solid var(--black);
+    margin-bottom: 56px;
+  }
+
+  .mark {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: var(--black);
+    text-decoration: none;
+  }
+
+  nav a {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--ink);
+    text-decoration: none;
+    margin-left: 20px;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+  }
+  nav a:hover, nav a:focus-visible { opacity: 1; }
+  nav a.active { color: var(--black); opacity: 1; border-bottom: 2px solid var(--black); padding-bottom: 2px; }
+
+  .title-block {
+    margin-bottom: 72px;
+    padding-right: 28px;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: clamp(24px, 4.2vw, 34px);
+    letter-spacing: -0.01em;
+    color: var(--black);
+    line-height: 1.25;
+    text-transform: uppercase;
+  }
+
+  .subtitle {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: var(--ink);
+    opacity: 0.65;
+    text-transform: uppercase;
+    margin-top: 14px;
+  }
+
+  .entry {
+    padding: 28px 28px 28px 0;
+    animation: rise 0.6s ease backwards;
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .location {
+    font-weight: 600;
+    font-size: clamp(16px, 2.1vw, 18px);
+    color: var(--black);
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+  }
+
+  .koan {
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--ink);
+    margin-top: 8px;
+    line-height: 1.5;
+  }
+
+  .seal {
+    display: flex;
+    align-items: center;
+    margin: 0 28px 0 0;
+    padding: 2px 0;
+  }
+  .seal svg { opacity: 0.8; }
+
+  footer {
+    margin-top: 90px;
+    padding: 24px 28px 0 0;
+    border-top: 2px solid var(--black);
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--ink);
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  @media (max-width: 540px) {
+    .page { padding: 0 16px 90px 40px; }
+    .page::before { left: 16px; }
+    header { padding: 36px 6px 22px 0; margin-bottom: 40px; flex-direction: column; align-items: flex-start; gap: 12px; }
+    nav a { margin-left: 0; margin-right: 18px; }
+    .title-block { margin-bottom: 48px; padding-right: 6px; }
+    .entry { padding: 22px 6px 22px 0; }
+    .seal { margin: 0 6px 0 0; }
+    footer { padding: 22px 6px 0 0; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <a href="#" class="mark">DANA SORMAN</a>
+    <nav>
+      <a href="dana-sorman-cv.html" class="active">CV</a>
+      <a href="dana-sorman-glossary.html">GLOSSARY</a>
+    </nav>
+  </header>
+
+  <div class="title-block">
+    <h1>Selected Global Expeditions</h1>
+    <div class="subtitle">2018 — Present</div>
+  </div>
+
+  <main>
+
+    <div class="entry" style="animation-delay: 0.02s">
+      <div class="location">CHICHÉN ITZÁ, TEOTIHUACAN, MEXICO</div>
+      <div class="koan">remember the jewels are buried underground</div>
+    </div>
+    <div class="seal"><svg width="16" height="16" viewBox="0 0 18 18"><circle cx="9" cy="9" r="7.3" stroke="#071FE1" stroke-width="1" fill="none"/><line x1="9" y1="4.3" x2="9" y2="13.7" stroke="#071FE1" stroke-width="1"/></svg></div>
+
+    <div class="entry" style="animation-delay: 0.04s">
+      <div class="location">BERMUDA TRIANGLE, ATLANTIC OCEAN</div>
+      <div class="koan">myth launders money, money launders myth</div>
+    </div>
+    <div class="seal"><svg width="16" height="16" viewBox="0 0 18 18"><circle cx="9" cy="9" r="7.3" stroke="#071FE1" stroke-width="1" fill="none"/><line x1="9" y1="4.3" x2="9" y2="13.7" stroke="#071FE1" stroke-width="1"/></svg></div>
+
+    <div class="entry" style="animation-delay: 0.06s">
+      <div class="location">PYRAMID OF THE SUN, K5 MEGALITH CHAMBER, BOSNIA</div>
+      <div class="koan">scalar waves reweave dead ends</div>
+    </div>
+    <div class="seal"><svg width="16" height="16" viewBox="0 0 18 18"><circle cx="9" cy="9" r="7.3" stroke="#071FE1" stroke-width="1" fill="none"/><line x1="9" y1="4.3" x2="9" y2="13.7" stroke="#071FE1" stroke-width="1"/></svg></div>
+
+    <div class="entry" style="animation-delay: 0.08s">
+      <div class="location">CRETE, GAVDOS, DELPHI, GREECE</div>
+      <div class="koan">ariadne threads all possible solutions</div>
+    </div>
+    <div class="seal"><svg width="16" height="16" viewBox="0 0 18 18"><circle cx="9" cy="9" r="7.3" stroke="#071FE1" stroke-width="1" fill="none"/><line x1="9" y1="4.3" x2="9" y2="13.7" stroke="#071FE1" stroke-width="1"/></svg></div>
+
+    <div class="entry" style="animation-delay: 0.1s">
+      <div class="location">LYCIA, FOUNTAIN OF ANTONINLER, TURKEY</div>
+      <div class="koan">anomaly not enigma</div>
+    </div>
+    <div class="seal"><svg width="16" height="16" viewBox="0 0 18 18"><circle cx="9" cy="9" r="7.3" stroke="#071FE1" stroke-width="1" fill="none"/><line x1="9" y1="4.3" x2="9" y2="13.7" stroke="#071FE1" stroke-width="1"/></svg></div>
+
+    <div class="entry" style="animation-delay: 0.12s">
+      <div class="location">VATNAJÖKULL, ICELAND</div>
+      <div class="koan">blue sapphire rule-sets</div>
+    </div>
+    <div class="seal"><svg width="16" height="16" viewBox="0 0 18 18"><circle cx="9" cy="9" r="7.3" stroke="#071FE1" stroke-width="1" fill="none"/><line x1="9" y1="4.3" x2="9" y2="13.7" stroke="#071FE1" stroke-width="1"/></svg></div>
+
+    <div class="entry" style="animation-delay: 0.14s">
+      <div class="location">ĠGANTIJA, COMINO ZERO POINT, MALTESE ARCHIPELAGO</div>
+      <div class="koan">immortality is continuity</div>
+    </div>
+    <div class="seal"><svg width="16" height="16" viewBox="0 0 18 18"><circle cx="9" cy="9" r="7.3" stroke="#071FE1" stroke-width="1" fill="none"/><line x1="9" y1="4.3" x2="9" y2="13.7" stroke="#071FE1" stroke-width="1"/></svg></div>
+
+    <div class="entry" style="animation-delay: 0.16s">
+      <div class="location">PRAGUE, CZECH REPUBLIC</div>
+      <div class="koan">rubidium renders lithium eternal</div>
+    </div>
+    <div class="seal"><svg width="16" height="16" viewBox="0 0 18 18"><circle cx="9" cy="9" r="7.3" stroke="#071FE1" stroke-width="1" fill="none"/><line x1="9" y1="4.3" x2="9" y2="13.7" stroke="#071FE1" stroke-width="1"/></svg></div>
+
+    <div class="entry" style="animation-delay: 0.18s">
+      <div class="location">ASWAN, EGYPT</div>
+      <div class="koan">origins of time</div>
+    </div>
+    <div class="seal"><svg width="16" height="16" viewBox="0 0 18 18"><circle cx="9" cy="9" r="7.3" stroke="#071FE1" stroke-width="1" fill="none"/><line x1="9" y1="4.3" x2="9" y2="13.7" stroke="#071FE1" stroke-width="1"/></svg></div>
+
+    <div class="entry" style="animation-delay: 0.2s">
+      <div class="location">NGORONGORO CRATER, TANZANIA</div>
+      <div class="koan">jester outlives king</div>
+    </div>
+    <div class="seal"><svg width="16" height="16" viewBox="0 0 18 18"><circle cx="9" cy="9" r="7.3" stroke="#071FE1" stroke-width="1" fill="none"/><line x1="9" y1="4.3" x2="9" y2="13.7" stroke="#071FE1" stroke-width="1"/></svg></div>
+
+    <div class="entry" style="animation-delay: 0.22s">
+      <div class="location">TABLE MOUNTAIN, SOUTH AFRICA</div>
+      <div class="koan">when we achieve our objective, no one will know, including us</div>
+    </div>
+    <div class="seal"><svg width="16" height="16" viewBox="0 0 18 18"><circle cx="9" cy="9" r="7.3" stroke="#071FE1" stroke-width="1" fill="none"/><line x1="9" y1="4.3" x2="9" y2="13.7" stroke="#071FE1" stroke-width="1"/></svg></div>
+
+    <div class="entry" style="animation-delay: 0.24s">
+      <div class="location">ST. CATHERINE'S CATHEDRAL, SINAI PENINSULA, EGYPT</div>
+      <div class="koan">grief resurrects vitality</div>
+    </div>
+    <div class="seal"><svg width="16" height="16" viewBox="0 0 18 18"><circle cx="9" cy="9" r="7.3" stroke="#071FE1" stroke-width="1" fill="none"/><line x1="9" y1="4.3" x2="9" y2="13.7" stroke="#071FE1" stroke-width="1"/></svg></div>
+
+    <div class="entry" style="animation-delay: 0.26s">
+      <div class="location">WADI RUM, LITTLE PETRA, JORDAN</div>
+      <div class="koan">water into wine</div>
+    </div>
+    <div class="seal"><svg width="16" height="16" viewBox="0 0 18 18"><circle cx="9" cy="9" r="7.3" stroke="#071FE1" stroke-width="1" fill="none"/><line x1="9" y1="4.3" x2="9" y2="13.7" stroke="#071FE1" stroke-width="1"/></svg></div>
+
+    <div class="entry" style="animation-delay: 0.28s">
+      <div class="location">RING OF FIRE, INDONESIA</div>
+      <div class="koan">ant / arc / tica: reverse curve time-lag predictions</div>
+    </div>
+    <div class="seal"><svg width="16" height="16" viewBox="0 0 18 18"><circle cx="9" cy="9" r="7.3" stroke="#071FE1" stroke-width="1" fill="none"/><line x1="9" y1="4.3" x2="9" y2="13.7" stroke="#071FE1" stroke-width="1"/></svg></div>
+
+    <div class="entry" style="animation-delay: 0.3s">
+      <div class="location">BOGOTÁ, COLOMBIA</div>
+      <div class="koan">frozen angel investors</div>
+    </div>
+    <div class="seal"><svg width="16" height="16" viewBox="0 0 18 18"><circle cx="9" cy="9" r="7.3" stroke="#071FE1" stroke-width="1" fill="none"/><line x1="9" y1="4.3" x2="9" y2="13.7" stroke="#071FE1" stroke-width="1"/></svg></div>
+
+    <div class="entry" style="animation-delay: 0.32s">
+      <div class="location">IBIZA, BALEARIC ISLANDS</div>
+      <div class="koan">monastic firewall</div>
+    </div>
+    <div class="seal"><svg width="16" height="16" viewBox="0 0 18 18"><circle cx="9" cy="9" r="7.3" stroke="#071FE1" stroke-width="1" fill="none"/><line x1="9" y1="4.3" x2="9" y2="13.7" stroke="#071FE1" stroke-width="1"/></svg></div>
+
+    <div class="entry" style="animation-delay: 0.34s">
+      <div class="location">NAVAJO NATION, USA</div>
+      <div class="koan">monumental motherboard</div>
+    </div>
+    <div class="seal"><svg width="16" height="16" viewBox="0 0 18 18"><circle cx="9" cy="9" r="7.3" stroke="#071FE1" stroke-width="1" fill="none"/><line x1="9" y1="4.3" x2="9" y2="13.7" stroke="#071FE1" stroke-width="1"/></svg></div>
+
+    <div class="entry" style="animation-delay: 0.36s">
+      <div class="location">MOUNT SHASTA, CALIFORNIA, USA</div>
+      <div class="koan">lose the plot, find the loophole</div>
+    </div>
+    <div class="seal"><svg width="16" height="16" viewBox="0 0 18 18"><circle cx="9" cy="9" r="7.3" stroke="#071FE1" stroke-width="1" fill="none"/><line x1="9" y1="4.3" x2="9" y2="13.7" stroke="#071FE1" stroke-width="1"/></svg></div>
+
+    <div class="entry" style="animation-delay: 0.38s">
+      <div class="location">BLACK ROCK DESERT, NEVADA, USA</div>
+      <div class="koan">illusion of singularity</div>
+    </div>
+
+  </main>
+
+  <footer>Dana Sorman — Selected Global Expeditions</footer>
+
+</div>
+</body>
+</html>
